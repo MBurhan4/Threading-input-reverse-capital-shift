@@ -15,40 +15,73 @@ not waste your memory resources.
 # Python code;
 #used to run multiple threads (tasks, function calls) at the same time
 import threading
-#It allows functionality like getting the current time, pausing the Program from executing, etc. So before starting with this module we need to import it
+
+It allows functionality like getting the current time, pausing the Program from executing, etc. So before starting with this module we need to import it
+
 import time
-# Here it takes input from the user
+
+Here it takes input from the user
+
 def input_function():
+
     print("Your string is:  ",string)
-# the reverse fuction returns a reversed object or iterator of the input string
+    
+ the reverse fuction returns a reversed object or iterator of the input string
+ 
 def reverse_function():
+
     print("reverse string:  ",string[::-1])
-# It returns a string where the first character is upper case, and the rest is lower case.
+    
+It returns a string where the first character is upper case, and the rest is lower case.
+
 def capitalize_function():
+
     print("capitalize  string:  ",string.capitalize())
-# It represents the number of shifts to be made over the desired axis
+    
+ It represents the number of shifts to be made over the desired axis
+ 
 def shift_function():
+
     data=[]
+    
     for i in string:
+    
         if i.strip() and i in strs:
+        
             data.append(strs[(strs.index(i) + 2) % 26])
+            
         elif i.strip() and i in STRS:
+        
             data.append(STRS[(STRS.index(i) + 2) % 26])
+            
         else:
+        
             data.append(i)
+            
     output=''.join(data)
+    
     print("shifting character:  ",output)
 
 string=input("ENTER THE STRING:   ")
+
 strs='zyxwvutsrqponmlkjihgfedcba'
+
 STRS='ZYXWVUTSRQPONMLKJIHGFEDCBA'
+
 input_function()
+
 reverse_function()
+
 capitalize_function()
+
 shift_function()
+
 t1 = threading.Thread(target=input_function, name='t1')
+
 t2 = threading.Thread(target=reverse_function, name='t2')
+
 t3 = threading.Thread(target=capitalize_function, name='t3')
+
 t4 = threading.Thread(target=shift_function, name='t4')
 
 Output;
