@@ -36,7 +36,7 @@ It returns a string where the first character is upper case, and the rest is low
 
 def capitalize_function():
 
-    print("capitalize  string:  ",string.capitalize())
+    print("capitalize  string:  ",string.upper())
     
  It represents the number of shifts to be made over the desired axis
  
@@ -86,4 +86,8 @@ t4 = threading.Thread(target=shift_function, name='t4')
 
 Output;
 
-![ioi](https://user-images.githubusercontent.com/92621862/210607670-f47bcb26-83e3-43e6-8237-8b34e4e1c5a4.PNG)
+![n1](https://user-images.githubusercontent.com/92621862/210620985-dcfe1494-802a-41fd-9da0-6e122af41d68.PNG)
+
+![n2](https://user-images.githubusercontent.com/92621862/210621011-6ac62515-6573-4ac7-b6a3-23352fb91947.PNG)
+
+
